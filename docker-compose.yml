@@ -83,8 +83,8 @@ services:
       bash -c 'bash -s <<EOF
       trap "break;exit" SIGHUP SIGINT SIGTERM
       while /bin/true; do
-        /usr/local/bin/php /var/www/html/cron.php
         sleep 900
+        /usr/local/bin/php /var/www/html/cron.php
       done
       EOF'
     networks:
